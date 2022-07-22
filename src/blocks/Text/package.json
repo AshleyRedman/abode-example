@@ -1,0 +1,15 @@
+{
+  "name": "text",
+  "version": "1.0.0",
+  "description": "",
+  "main": "webpack.mix.js",
+  "scripts": {
+    "watch": "npx mix watch",
+    "dev": "npx mix",
+    "prod": "npx mix --production"
+  },
+  "devDependencies": {
+    "react-refresh": "^0.14.0",
+    "ts-loader": "^9.3.1"
+  }
+}
