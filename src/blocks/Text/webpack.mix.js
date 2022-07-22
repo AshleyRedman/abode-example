@@ -8,6 +8,7 @@ mix.options({
   terser: {
     extractComments: false,
   },
+  manifest: false
 });
 
 // The actual bundling, nice & easy
