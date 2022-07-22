@@ -20,10 +20,12 @@ for the purposes of this demo this will start up a php server, take a look in `i
 
 then in a new terminal, go into `/src` & `npm i`
 
-then run `npm run:prod` <- simply just to bundle out a nice tailwind css
+then run `npm run tw:prod` <- simply just to bundle out a nice tailwind css
 
 then go into `/src/blocks/Text` and run `npm i && npm run prod`
 
 There are dev & watching options also...
 
 Go to `localhost:8080` and ta da...
+
+There is a timeout so watch the screen for 2 seconds... checkout `Text.tsx`
