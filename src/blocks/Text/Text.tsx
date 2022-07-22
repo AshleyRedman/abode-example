@@ -12,7 +12,11 @@ const Text: React.FC<Props> = (props): React.ReactElement => {
     }, 2000);
   }, []);
 
-  return <p>{state}</p>;
+  return (
+    <p className={state === props.normal ? 'text-red-500' : 'text-green-500'}>
+      {state}
+    </p>
+  );
 };
 
 export default Text;
