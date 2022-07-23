@@ -1,7 +1,7 @@
 {
-  "name": "text",
+  "name": "person",
   "version": "1.0.0",
-  "description": "",
+  "description": "Person block",
   "main": "webpack.mix.js",
   "scripts": {
     "watch": "npx mix watch",

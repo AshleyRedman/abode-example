@@ -6,6 +6,13 @@ function dataToProps($data)
 }
 
 $value = 'server data';
+$another = 'ree';
+
+
+$more_complex = [
+    'key' => [1, 2, 'three', [4, 5, 6, 7, 8]],
+    1 => 'test'
+];
 
 ?>
 
@@ -23,26 +30,29 @@ $value = 'server data';
     <link href="/dist/output.css" rel="stylesheet">
     <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
 
-
+    <!-- JS Blocks -->
+    <script src="/blocks/Text/dist/bundle.js" defer></script>
+    <script src="/blocks/Person/dist/bundle.js" defer></script>
 </head>
 
 <body class="font-sans antialiased">
-    <!-- -->
+
     <p>This is rendered from the server - static</p>
 
-    <!-- The text inside shows for a split second, so we probs want this empty -->
     <div data-component="Text" data-prop-server="<?php echo dataToProps($value); ?>" data-prop-normal="Normal text">
         This text wil be replaced by your react component
     </div>
-    <!-- -->
+
     <p>This is to come from <?php echo $value; ?></p>
 
+    <div data-component="Text" data-prop-server="lol" data-prop-normal="<?php echo $another; ?>">
+        This text wil be replaced by your react component
+    </div>
 
-    <!-- A bundle for Text block/component only -->
-    <script src="/blocks/Text/dist/bundle.js"></script>
+    <div data-component="Person" data-prop-obj="<?php echo dataToProps(($more_complex)); ?>">
+        This text wil be replaced by your react component
+    </div>
 
-    <!-- A bundle for the Header block/component only -->
-    <!-- Add another bundle here of another component you want to load on the page, alas you can dyanamically do this... -->
 </body>
 
 </html>
